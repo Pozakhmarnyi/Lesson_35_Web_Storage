@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incredible</title>
+    <script
+      src="https://kit.fontawesome.com/de380f790c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+      #content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      #content div {
+        width: 33%;
+      }
+      i {
+        font-size: 22px;
+      }
+      #buttonFavorites {
+        border-radius: 20px;
+        background: white;
+
+        padding: 12px 30px;
+        text-align: center;
+      }
+      .myFavorites {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .myFavorites div {
+        width: 33%;
+        background: rgba(211, 211, 211, 0.116);
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <input type="text" name="text" id="userValue" value="Search" />
+    <select id="single">
+      <option>movie</option>
+      <option>series</option>
+      <option>episode</option>
+    </select>
+    <button id="Search" onclick="pressFuncSearch()">Search</button>
+    <div id="DIV"></div>
+    <button id="buttonFavorites" onclick="favorites()">
+      Favorite films
+    </button>
+    <div class="myFavorites"></div>
+    <div id="content"></div>
+
+    <script src="scr.js"></script>
+  </body>
+</html>
