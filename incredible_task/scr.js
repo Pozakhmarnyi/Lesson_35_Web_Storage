@@ -1,15 +1,3 @@
-// РОБИ КРОК ЗА КРОКОМ ! А то процесор перегріється ))
-
-// 1 - брати текст з інпута --> перевести у  val
-// 2 - поєднати val  із запитом + ключ ---> отримата перший api
-// 3 - перетворити в JSON --
-// // 4 - відобразити просто заголовки тих Розшукуваних фільмів
-// // 5 -Если по заданным критериям не будут найдены фильмы, то отобразите сообщение Movie not found!.
-//  6-  выбора типа (movie, series, episode).
-// 7 - гортати по сторінкам пошуку
-// (а - зробити відображення яка сторінка. б - зробити дві кнопки - вперед\назад
-//    в- створити ф-цію, яка гортає сторінки)
-
 let value = "";
 $("#userValue")
   .keyup(function () {
@@ -55,12 +43,12 @@ function show() {
   $("i").on("click", function (e) {
     $(e.target).css("color", "red");
     localStorage.setItem($(this).attr("id"), $(this).attr("id"));
+    funcGetFavorFromData();
   });
 }
 
 //витягую ІД
 funcGetFavorFromData();
-
 function funcGetFavorFromData() {
   for (let key in localStorage) {
     let id = localStorage.getItem(localStorage[key]);
@@ -86,8 +74,9 @@ function funcGetFavorFromData() {
 let htmlFavorite = "";
 function favorites() {
   // нажимаю кнопку = приховую\показую вміст favorites
-  $(".myFavorites").toggle();
-  htmlFavorite += $(".myFavorites").html(htmlFavorite);
+  $(".myFavorites").fadeToggle();
+  $(".myFavorites").html(htmlFavorite);
+  $(".content").hide();
 }
 
 // вписую люблені фільми
